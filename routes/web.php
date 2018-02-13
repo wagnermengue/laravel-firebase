@@ -11,6 +11,11 @@
 |
 */
 
+use SafeStudio\Firebase\Firebase;
+
 Route::get('/', function () {
+    $teste = new Firebase();
+    $data = ['key' => 'data' , 'key1' => 'data1'];
+    $teste->set('/test2/',$data);
     return view('welcome');
 });
